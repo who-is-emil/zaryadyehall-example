@@ -1,0 +1,32 @@
+<!doctype html>
+<html {% if lang %} lang="{{ lang }}" {% else %} lang="ru" {% endif %} class="animate-disabled">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+		{% if title %}
+			<title>{{ title }}</title>
+		{% else %}
+			<title>Error title</title>
+		{% endif %}
+
+		{# Подключаем все сгенерированные CSS #}
+		{% if cssFiles is defined %}
+			{% for cssFile in cssFiles %}
+				<link href="{{ cssFile }}" rel="stylesheet">
+			{% endfor %}
+		{% endif %}
+	</head>
+	<body>
+
+		{% block content %}{% endblock %}
+
+		{# Подключаем все сгенерированные JS #}
+		{% if jsFiles is defined %}
+			{% for jsFile in jsFiles %}
+				<script src="{{ jsFile }}" defer></script>
+			{% endfor %}
+		{% endif %}
+	</body>
+</html>

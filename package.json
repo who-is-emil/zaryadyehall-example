@@ -1,0 +1,42 @@
+{
+  "name": "zaryadyehall-example",
+  "version": "1.0.0",
+  "description": "",
+  "dependencies": {
+    "jquery": "^3.7.1",
+    "vanilla-lazyload": "^17.8.4",
+    "gsap": "^3.12.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "babel-loader": "^9.2.1",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^12.0.2",
+    "css-loader": "^7.1.2",
+    "css-minimizer-webpack-plugin": "^7.0.0",
+    "file-loader": "^6.2.0",
+    "glob": "^11.0.0",
+    "html-webpack-plugin": "^5.6.3",
+    "mini-css-extract-plugin": "^2.9.2",
+    "raw-loader": "^4.0.2",
+    "sass": "1.81.0",
+    "sass-loader": "^16.0.3",
+    "style-loader": "^4.0.0",
+    "twig": "^1.17.1",
+    "twig-html-loader": "^0.1.9",
+    "twig-loader": "^0.5.5",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.96.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.1.0",
+    "webpack-sources": "^3.2.3"
+  },
+  "scripts": {
+    "dev": "webpack serve --mode development",
+    "build": "webpack --mode production"
+  },
+  "keywords": [],
+  "author": "Emil",
+  "license": "ISC"
+}

@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "data": {
+    "message": {
+      "message": "Успешно!",
+      "type": "success"
+    },
+    "isAuth": true,
+    "fillOutAProfile": false
+  },
+  "errors": []
+}

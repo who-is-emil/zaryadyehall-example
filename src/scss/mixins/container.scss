@@ -1,0 +1,21 @@
+@mixin container {
+  width: 100%;
+  padding-left: rem(16);
+  padding-right: rem(16);
+
+  @include media-breakpoint-up(lg) {
+    padding-left: rem(24);
+    padding-right: rem(24);
+  }
+}
+
+@mixin wrapper {
+  width: 100%;
+  padding-left: rem(16);
+  padding-right: rem(16);
+
+  @include media-breakpoint-up(md) {
+    padding-left: rem(24);
+    padding-right: rem(24);
+  }
+}

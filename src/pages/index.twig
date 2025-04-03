@@ -1,0 +1,76 @@
+{% extends "../include/layout/default.twig" %}
+
+{% block content %}
+
+	<style>
+		.index-page {
+			padding: 80px 40px;
+		}
+
+		.index-page__group:not(:last-child) {
+			margin-bottom: 48px;
+		}
+
+		.index-page__title {
+			margin-bottom: 16px;
+		}
+
+
+		.index-page__list {
+			padding: 20px 40px;
+			margin: 20px auto 0;
+			width: 100%;
+			border-radius: 8px;
+			box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+			background-color: #fff;
+			text-align: left;
+			columns: 210px auto;
+			column-gap: 50px;
+			column-rule: 1px solid #f2f2f2;
+		}
+
+		.index-page__item {
+			word-wrap: break-word;
+			display: inline-block;
+			box-sizing: border-box;
+			width: 100%;
+			padding: 10px 15px 10px 40px;
+			position: relative;
+		}
+
+		.index-page__link {
+			color: currentColor;
+			transition: opacity 0.3s ease;
+		}
+
+		.index-page__link[href]:hover {
+			opacity: 0.5;
+		}
+
+		.index-page__link:not([href]) {
+			opacity: 0.5;
+		}
+	</style>
+
+	<div class="index-page">
+		{% for group in pages %}
+			<div class="index-page__group">
+				{% if group.title %}
+					<h2 class="index-page__title">{{ group.title }}</h2>
+				{% endif %}
+
+				<ul class="index-page__list">
+					{% for page in group.items %}
+						<li class="index-page__item">
+							{% if page.href %}
+								<a class="index-page__link" href="{{ page.href }}">{{ page.text }}</a>
+							{% else %}
+								<span class="index-page__link">{{ page.text }}</span>
+							{% endif %}
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
+		{% endfor %}
+	</div>
+{% endblock %}

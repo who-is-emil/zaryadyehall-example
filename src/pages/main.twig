@@ -2,6 +2,43 @@
 
 {% block content %}
 
-	content
+	<div style="display: flex; flex-wrap: wrap; gap: 2rem;">
+		<div style="width: calc(50% - 1rem); height: 250px; background-color: grey;"></div>
+		<div style="width: calc(50% - 1rem); height: 250px; background-color: grey;"></div>
+		<div style="width: calc(50% - 1rem); height: 250px; background-color: grey;"></div>
+		<div style="width: calc(50% - 1rem); height: 250px; background-color: grey;"></div>
+		<div style="width: calc(50% - 1rem); height: 250px; background-color: grey;"></div>
+		<div style="width: calc(50% - 1rem); height: 250px; background-color: grey;"></div>
+		<div style="width: calc(50% - 1rem); height: 250px; background-color: grey;"></div>
+	</div>
+
+	<div class="menu-wave">
+		<svg viewBox="0 0 100 100" preserveaspectratio="none" data-svg-menu>
+			<path class="shape-overlays__path"></path>
+			<path class="shape-overlays__path"></path>
+		</svg>
+	</div>
+
+	<div class="invert-mask"></div>
+
+	<div class="theme-wave">
+		<svg data-svg-theme viewBox="0 0 100 100" preserveaspectratio="none">
+			<defs>
+				<clipPath id="themask" clipPathUnits="objectBoundingBox">
+					<path class="shape-overlays__path"></path>
+				</clipPath>
+			</defs>
+		</svg>
+	</div>
+
+
+	{# <svg width="1" height="1" data-svg-theme>
+																													<defs>
+																														<clipPath id="themask" clippathunits="objectBoundingBox">
+																															<path width="1" height="1" class="shape-overlays__path"></path>
+																															<path class="shape-overlays__path"></path>
+																														</clipPath>
+																													</defs>
+																												</svg> #}
 
 {% endblock %}

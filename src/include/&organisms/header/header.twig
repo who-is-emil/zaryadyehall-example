@@ -1,1 +1,17 @@
-<header class="header">header</header>
+<header class="header">
+	<div class="header__container container">
+		<div class="header__logo">logo</div>
+
+		<div class="header__items">
+			{% for item in header.items %}
+				<div class="header__item">
+					<a href="{{ item.href }}" class="header__link">{{ item.text }}</a>
+				</div>
+			{% endfor %}
+		</div>
+
+		<div class="header__actions">
+			<button type="button" class="header__switch" data-menu-toggle>menu</button>
+		</div>
+	</div>
+</header>

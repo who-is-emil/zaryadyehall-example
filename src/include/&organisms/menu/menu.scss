@@ -1,3 +1,98 @@
 .menu {
   $root: &;
+
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 101;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $color-white;
+  color: $color-black;
+  opacity: 0;
+  pointer-events: none;
+
+  &__item {
+    font-size: rem(24);
+    line-height: 1.25;
+
+    &:not(:last-child) {
+      margin-bottom: rem(16);
+    }
+  }
+
+  &__link {
+    color: $color-black;
+  }
+}
+
+body {
+  background-color: $color-white;
+  color: $color-black;
+}
+
+body.dark {
+  background-color: $color-black;
+  color: $color-white;
+}
+
+.menu-wave {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  path {
+    fill: $color-white;
+  }
+
+  @at-root body.dark & {
+    path {
+      fill: $color-black;
+    }
+  }
+}
+
+.theme-wave {
+  position: fixed;
+  z-index: 103;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vw;
+  pointer-events: none;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  path {
+    fill: $color-black;
+    filter: invert(100%);
+  }
+}
+
+.invert-mask {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+
+  backdrop-filter: invert(1);
+  clip-path: url(#themask);
 }

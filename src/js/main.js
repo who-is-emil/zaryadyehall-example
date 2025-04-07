@@ -9,6 +9,8 @@ import './libs';
 import './utils/scroll';
 import './utils/userAgent';
 
-document.addEventListener('DOMContentLoaded', () => {});
+import menu from './components/menu';
 
-window.addEventListener('reinit', () => {});
+document.addEventListener('DOMContentLoaded', () => {
+  menu.init();
+});
